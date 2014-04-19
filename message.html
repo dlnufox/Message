@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+</head>
+
+<body>
+	<p><input type="button" id="inform" value="消息通知"></p>
+
+	<script type="text/javascript" src="message.js"></script>
+	<div id="listcontent"></div>
+
+	<script>
+
+	var flag = false;
+	var ci = $.contentInform({
+		width:'800'
+	});
+		 
+	var informbtn = $("#inform");
+	informbtn.click(function(){
+		debugger
+		if (flag===false) {
+			ci.open();
+		}else{
+			ci.close();
+		}
+		
+	});
+
+
+
+	</script>
+</body>
+</html>
